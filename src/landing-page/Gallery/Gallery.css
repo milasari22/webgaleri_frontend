@@ -13,3 +13,14 @@
   justify-content: center;
   margin: 0 auto;
 }
+
+.card-img-container {
+  height: 200px; /* Sesuaikan tinggi yang diinginkan */
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

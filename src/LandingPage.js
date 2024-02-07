@@ -5,7 +5,7 @@ const LandingPage = () => {
     <div>
       <LandingPageAwal />
     </div>
-  )
-}
+  );
+};
 
 export default LandingPage;

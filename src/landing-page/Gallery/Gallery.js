@@ -115,17 +115,12 @@ const Gallery = () => {
                         {image.name}
                       </div>
                     </div>
-                    <img
-                      src={`http://localhost:8000/files/` + image.gambar}
-                      alt="gambar"
-                      className="mb-1"
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        objectFit: "cover",
-                        borderRadius: "3%",
-                      }}
-                    />
+                    <div className="card-img-container mb-3">
+                      <img
+                        src={`http://localhost:8000/files/` + image.gambar}
+                        alt="gambar"
+                      />
+                    </div>
                     <p className="fw-bold fs-5">{image.nama_gambar}</p>
                     <div className="d-flex justify-content-between align-items-center">
                       <div>

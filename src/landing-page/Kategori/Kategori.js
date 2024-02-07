@@ -38,7 +38,7 @@ const Kategori = () => {
       </div>
       <div className="mt-4">
         <Container>
-          <h1 className="fw-bold fs-4">Kategori</h1>
+          {/* <h1 className="fw-bold fs-4">Kategori</h1>
           <Card className="category-container">
             <Card.Body>
               {loading ? (
@@ -74,7 +74,7 @@ const Kategori = () => {
                 </p>
               </Col>
             </Row>
-          )}
+          )} */}
 
           <div className="my-4">
             <Gallery />

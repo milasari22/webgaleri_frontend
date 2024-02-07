@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Sidebar = ({ isToggled, onToggleSidebar }) => {
   const sidebarClass = isToggled
-    ? "navbar-nav bg-gradient-danger sidebar sidebar-danger accordion toggled"
-    : "navbar-nav bg-gradient-danger sidebar sidebar-danger accordion";
+    ? "navbar-nav bg-gradient-dark sidebar sidebar-dark accordion toggled"
+    : "navbar-nav bg-gradient-dark sidebar sidebar-dark accordion";
 
   const sidebarToggleClass = isToggled ? "toggled" : "";
 
@@ -37,9 +37,23 @@ const Sidebar = ({ isToggled, onToggleSidebar }) => {
       </li>
 
       <li className="nav-item">
-        <Link to="gambar" className={`nav-link ${sidebarToggleClass}`}>
+        <Link to="picture" className={`nav-link ${sidebarToggleClass}`}>
           <i className="bi bi-image"></i>
           <span>Gambar</span>
+        </Link>
+      </li>
+
+      <li className="nav-item">
+        <Link to="informasi" className={`nav-link ${sidebarToggleClass}`}>
+          <i class="bi bi-info-circle"></i>
+          <span>Informasi</span>
+        </Link>
+      </li>
+
+      <li className="nav-item">
+        <Link to="penduduk" className={`nav-link ${sidebarToggleClass}`}>
+          <i className="bi bi-person-fill"></i>
+          <span>Penduduk</span>
         </Link>
       </li>
 

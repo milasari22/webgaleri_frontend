@@ -111,7 +111,9 @@ const Kategori = () => {
                       <th>Nama Kategori</th>
                       <th>Jenis Kategori</th>
                       <th>Keterangan</th>
-                      <th className="text-center">Action</th>
+                      <th className="text-center" colSpan={2}>
+                        Action
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
@@ -128,7 +130,8 @@ const Kategori = () => {
                           >
                             <i className="bi bi-pen-fill text-warning"></i>
                           </NavLink>
-                          |
+                        </td>
+                        <td>
                           <a
                             role="button"
                             className="ml-3"
