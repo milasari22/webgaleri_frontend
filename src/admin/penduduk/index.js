@@ -4,15 +4,15 @@ import Swal from "sweetalert2";
 import { useAuth } from "../../auth/AuthContext";
 
 const Penduduk = () => {
-  const [pendudukes, setPendudukes] = useState([]);
+  const [penduduks, setPenduduks] = useState([]);
   const [loading, setLoading] = useState(true);
   const { authToken } = useAuth();
 
   useEffect(() => {
-    fetchPendudukes();
+    fetchPenduduks();
   }, []);
 
-  const fetchPendudukes = async () => {
+  const fetchPenduduks = async () => {
     setLoading(true);
     try {
       Swal.fire({
@@ -28,10 +28,10 @@ const Penduduk = () => {
       const data = await response.json();
       Swal.close();
 
-      setPendudukes(data);
+      setPenduduks(data);
       setLoading(false); // Setelah data diambil, set loading ke false
     } catch (error) {
-      console.error("Error fetching pendudukes:", error);
+      console.error("Error fetching penduduks:", error);
       Swal.close();
       setLoading(false); // Jika terjadi kesalahan, set loading ke false
     }
@@ -60,8 +60,8 @@ const Penduduk = () => {
         });
 
         // Optionally, you can update the state to remove the deleted penduduk
-        setPendudukes((prevPendudukes) =>
-          prevPendudukes.filter((penduduk) => penduduk.id !== pendudukId)
+        setPenduduks((prevPenduduks) =>
+          prevPenduduks.filter((penduduk) => penduduk.id !== pendudukId)
         );
 
         Swal.fire({
@@ -71,7 +71,7 @@ const Penduduk = () => {
           showConfirmButton: false,
         });
 
-        fetchPendudukes();
+        fetchPenduduks();
       } catch (error) {
         console.error("Error deleting penduduk:", error);
         Swal.fire({
@@ -117,7 +117,7 @@ const Penduduk = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {pendudukes.map((penduduk, index) => (
+                    {penduduks.map((penduduk, index) => (
                       <tr key={`penduduk-${index}`}>
                         <td className="text-center">{index + 1}</td>
                         <td>{penduduk.nama_penduduk}</td>

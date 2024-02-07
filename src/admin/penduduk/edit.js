@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import axios from "axios";
 import { useAuth } from "../../auth/AuthContext";
 
-const pendudukEdit = () => {
+const PendudukEdit = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
   const { authToken } = useAuth();
@@ -117,22 +117,22 @@ const pendudukEdit = () => {
               ></input>
             </form>
             <form>
-              <p className="fw-bold">Jenis penduduk</p>
+              <p className="fw-bold">Jenis Kelamin</p>
               <input
                 type="text"
-                name="jenis_penduduk"
+                name="jenis_kelamin"
                 onChange={handleChange}
-                value={formData.jenis_penduduk}
+                value={formData.jenis_kelamin}
                 className="form-control"
               ></input>
             </form>
             <form>
-              <p className="fw-bold">Keterangan</p>
+              <p className="fw-bold">Umur</p>
               <input
                 type="text"
-                name="keterangan"
+                name="umur"
                 onChange={handleChange}
-                value={formData.keterangan}
+                value={formData.umur}
                 className="form-control"
               ></input>
             </form>
@@ -143,4 +143,4 @@ const pendudukEdit = () => {
   );
 };
 
-export default pendudukEdit;
+export default PendudukEdit;
