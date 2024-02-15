@@ -1,61 +1,65 @@
-.category-circle {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    cursor: pointer;
-  }
-  
-  .category-circle p {
-    color: #fff; /* Atur warna teks */
-    font-size: 16px; /* Atur ukuran font */
-  }
+/* styles.css */
+.container-ku {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
 
-  .category-card {
-    cursor: pointer;
-    border: 1px solid #ddd; /* Garis tepi untuk memberikan efek kartu */
-    border-radius: 8px; /* Membuat sudut kartu melengkung */
-    overflow: hidden; /* Menyembunyikan konten yang melebihi kartu */
-    transition: transform 0.2s; /* Efek transisi saat hover */
-    margin-bottom: 10px;
-  }
-  
-  .category-card:hover {
-    transform: scale(1.05); /* Efek perbesaran saat hover */
-  }
+.kategori-header {
+  margin-bottom: 20px; /* Memberi jarak dari atas */
+}
 
-  .show-more {
-    cursor: pointer;
-    text-decoration: underline;
-    color: #7c7171; /* Warna teks sesuai keinginan */
-  }
-  
-  .show-more:hover {
-    text-decoration: underline;
-  }
-  
-  .category-lines-container {
-padding-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
 
-  .category-lines {
-    width: 37px;
-    height: 6px;
-    background-color: #fff;
-    margin-bottom: 10px;
-  }
+.card-header {
+  padding: 20px;
+  background-color: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
 
-  
+.card-img-container {
+  width: 200px; /* Set width of container */
+  height: 200px; /* Set height of container */
+  border-radius: 50%; /* Apply border-radius to make it circular */
+  overflow: hidden; /* Hide overflow content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* Center the container */
+}
 
+.card-img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Scale the image to cover the entire container */
+}
 
+.card-title {
+  margin: 0;
+  font-size: 1.2em; /* Increase font size */
+  font-weight: bold; /* Set font weight to bold */
+}
 
-  
+.card-body {
+  padding: 20px;
+}
 
+.button {
+  background-color: #ce2727;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #df3c36;
+}

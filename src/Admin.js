@@ -13,6 +13,9 @@ import GambarEdit from "./admin/gambar/edit";
 import Penduduk from "./admin/penduduk";
 import PendudukTambah from "./admin/penduduk/tambah";
 import PendudukEdit from "./admin/penduduk/edit";
+import Menu from "./admin/menu";
+import MenuTambah from "./admin/menu/tambah";
+import MenuEdit from "./admin/menu/edit";
 import { useAuth } from "./auth/AuthContext";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -45,6 +48,9 @@ function Admin() {
             <Route path="penduduk" element={<Penduduk />} />
             <Route path="penduduk/tambah" element={<PendudukTambah />} />
             <Route path="penduduk/edit/:id" element={<PendudukEdit />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="menu/tambah" element={<MenuTambah />} />
+            <Route path="menu/edit/:id" element={<MenuEdit />} />
             <Route index element={<Dashboard />} />
           </Routes>
         </div>

@@ -89,6 +89,9 @@ const Gallery = () => {
 
   return (
     <div className="mt-4">
+      <br></br>
+      <br></br>
+      <br></br>
       <h1 className="fw-bold fs-4">Gallery</h1>
       <Card.Body>
         {loading ? (
